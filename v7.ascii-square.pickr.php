@@ -14,7 +14,7 @@ for ($i=1; $i<=$rows; $i++) {
         $r = fixNum($i + $j);
         $g = fixNum($i + $j);
         $b = fixNum($i + $j);
-        print(chr(fixNum($r+$g-$b*$i/$j)));
+        print(chr(fixNum($r - $g - $b - $i - $b)));
     }
     print("\n");
 }

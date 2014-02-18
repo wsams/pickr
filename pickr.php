@@ -12,9 +12,9 @@ $rows = 20;
 for ($i=1; $i<=$rows; $i++) {
     for ($j=1; $j<=$cols; $j++) {
         $r = fixNum($i + $j);
-        $g = fixNum($i + $j);
-        $b = fixNum($i + $j);
-        print(chr(fixNum($r+$g-$b*$i/$j)));
+        $g = fixNum(pow($i + $j - $r, 2));
+        $b = fixNum($i + $j - $g);
+        print(chr(fixNum(($r+$g+$b)-($i+$j))));
     }
     print("\n");
 }
